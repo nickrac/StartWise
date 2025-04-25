@@ -1,169 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>StartWise - Launch Smarter</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fc;
-      color: #1e2a36;
-    }
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Calendar, FileText, Users, BarChart3 } from "lucide-react";
 
-    header {
-      background-color: #ffffff;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+export default function StartWiseLandingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-100 p-6">
+      <header className="text-center py-16 max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">Start Smart. Stay Wise.</h1>
+        <p className="text-lg text-slate-600 mb-6">
+          Your all-in-one launchpad for starting, running, and growing your business — built for sole traders, limited companies, and everything in between.
+        </p>
+        <Button className="text-lg px-6 py-3">Get Started for Free</Button>
+      </header>
 
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      color: #1e2a36;
-    }
+      <section className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto my-16">
+        <Card>
+          <CardContent className="p-6">
+            <CheckCircle className="w-8 h-8 mb-4 text-green-600" />
+            <h3 className="text-xl font-semibold mb-2">Smart Compliance</h3>
+            <p className="text-slate-600">Track industry-specific obligations and never miss a deadline with automated alerts.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <Calendar className="w-8 h-8 mb-4 text-blue-600" />
+            <h3 className="text-xl font-semibold mb-2">Meetings & Events</h3>
+            <p className="text-slate-600">Sync calendars, plan important meetings, and get reminders for HMRC calls or key events.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <FileText className="w-8 h-8 mb-4 text-amber-500" />
+            <h3 className="text-xl font-semibold mb-2">Templates & Resources</h3>
+            <p className="text-slate-600">Access essential templates — from business plans to GDPR policies and more.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <Users className="w-8 h-8 mb-4 text-purple-600" />
+            <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
+            <p className="text-slate-600">Work with co-founders, accountants, and legal advisors in one central hub.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <BarChart3 className="w-8 h-8 mb-4 text-cyan-600" />
+            <h3 className="text-xl font-semibold mb-2">Accounting Ready</h3>
+            <p className="text-slate-600">Connect to Xero, QuickBooks or track expenses and budgets directly inside StartWise.</p>
+          </CardContent>
+        </Card>
+      </section>
 
-    header p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
+      <section className="text-center mt-20">
+        <h2 className="text-3xl font-bold mb-4">Ready to launch smarter?</h2>
+        <p className="text-slate-600 mb-6">Start your business with confidence. Try StartWise free today.</p>
+        <Button className="text-lg px-6 py-3">Create Your Account</Button>
+      </section>
 
-    .cta-button {
-      background-color: #167d88;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .hero-image {
-      width: 90%;
-      max-width: 500px;
-      margin: 2rem auto;
-      display: block;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .features {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .feature {
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .pricing-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .plan {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 2rem;
-      width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: left;
-    }
-
-    .plan h2 {
-      margin-top: 0;
-      color: #167d88;
-    }
-
-    .plan ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .plan ul li::before {
-      content: "✓ ";
-      color: #167d88;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #167d88;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Launch Smarter. Grow Faster.</h1>
-  <p>StartWise helps new businesses get set up, stay compliant, and succeed – all in one smart platform.</p>
-  <button class="cta-button">Start Your Free 14-Day Trial</button>
-  <img class="hero-image" src="https://via.placeholder.com/500x300?text=StartWise+Hero+Image" alt="Hero Image">
-</header>
-
-<section class="section">
-  <h2>Features</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>📋 Smart Checklists</h3>
-      <p>Step-by-step guidance tailored to your business type.</p>
+      {/* Mobile Responsive Footer */}
+      <footer className="text-center text-slate-500 text-sm mt-16">
+        © {new Date().getFullYear()} StartWise. All rights reserved.
+      </footer>
     </div>
-    <div class="feature">
-      <h3>🔒 Compliance Monitoring</h3>
-      <p>Stay alert for deadlines and requirements.</p>
-    </div>
-    <div class="feature">
-      <h3>🗓️ Task & Event Management</h3>
-      <p>Track meetings and stay organized.</p>
-    </div>
-  </div>
-</section>
+  );
+}
 
-<section class="section" style="background-color:#eef3f7;">
-  <h2>Pricing</h2>
-  <div class="pricing-tabs">
-    <div class="plan">
-      <h2>Starter - £15/mo</h2>
-      <ul>
-        <li>Personalized Setup Checklists</li>
-        <li>Compliance Alerts</li>
-        <li>Calendar & Task Management</li>
-        <li>Templates for Industries</li>
-      </ul>
+// --- Signup Page ---
+export function StartWiseSignup() {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6">
+      <h1 className="text-3xl font-bold mb-6">Create Your StartWise Account</h1>
+      <form className="w-full max-w-sm">
+        <input className="border p-3 w-full rounded mb-4" type="text" placeholder="Full Name" />
+        <input className="border p-3 w-full rounded mb-4" type="email" placeholder="Email Address" />
+        <input className="border p-3 w-full rounded mb-6" type="password" placeholder="Password" />
+        <Button className="w-full">Sign Up</Button>
+      </form>
     </div>
-    <div class="plan">
-      <h2>Pro - £24/mo</h2>
-      <ul>
-        <li>All Starter Features</li>
-        <li>Accounting Integrations</li>
-        <li>Advanced Automation</li>
-        <li>Contact Manager</li>
-        <li>Priority Email Support</li>
-      </ul>
+  );
+}
+
+// --- Thank You / Dashboard Page ---
+export function StartWiseThankYou() {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-slate-50 p-6">
+      <h1 className="text-4xl font-bold mb-4">Welcome to StartWise!</h1>
+      <p className="text-slate-600 mb-8 text-center max-w-md">
+        Your account is ready. Let's help you set up your business smarter, faster, and better. Start by completing your first checklist!
+      </p>
+      <Button className="text-lg px-6 py-3">Go to Dashboard</Button>
     </div>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 StartWise. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+  );
+}
