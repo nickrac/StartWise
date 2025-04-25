@@ -1,0 +1,94 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Calendar, FileText, Users, BarChart3 } from "lucide-react";
+
+export default function StartWiseLandingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-100 p-6">
+      <header className="text-center py-16 max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">Start Smart. Stay Wise.</h1>
+        <p className="text-lg text-slate-600 mb-6">
+          Your all-in-one launchpad for starting, running, and growing your business — built for sole traders, limited companies, and everything in between.
+        </p>
+        <Button className="text-lg px-6 py-3">Get Started for Free</Button>
+      </header>
+
+      <section className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto my-16">
+        <Card>
+          <CardContent className="p-6">
+            <CheckCircle className="w-8 h-8 mb-4 text-green-600" />
+            <h3 className="text-xl font-semibold mb-2">Smart Compliance</h3>
+            <p className="text-slate-600">Track industry-specific obligations and never miss a deadline with automated alerts.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <Calendar className="w-8 h-8 mb-4 text-blue-600" />
+            <h3 className="text-xl font-semibold mb-2">Meetings & Events</h3>
+            <p className="text-slate-600">Sync calendars, plan important meetings, and get reminders for HMRC calls or key events.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <FileText className="w-8 h-8 mb-4 text-amber-500" />
+            <h3 className="text-xl font-semibold mb-2">Templates & Resources</h3>
+            <p className="text-slate-600">Access essential templates — from business plans to GDPR policies and more.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <Users className="w-8 h-8 mb-4 text-purple-600" />
+            <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
+            <p className="text-slate-600">Work with co-founders, accountants, and legal advisors in one central hub.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6">
+            <BarChart3 className="w-8 h-8 mb-4 text-cyan-600" />
+            <h3 className="text-xl font-semibold mb-2">Accounting Ready</h3>
+            <p className="text-slate-600">Connect to Xero, QuickBooks or track expenses and budgets directly inside StartWise.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="text-center mt-20">
+        <h2 className="text-3xl font-bold mb-4">Ready to launch smarter?</h2>
+        <p className="text-slate-600 mb-6">Start your business with confidence. Try StartWise free today.</p>
+        <Button className="text-lg px-6 py-3">Create Your Account</Button>
+      </section>
+
+      {/* Mobile Responsive Footer */}
+      <footer className="text-center text-slate-500 text-sm mt-16">
+        © {new Date().getFullYear()} StartWise. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
+// --- Signup Page ---
+export function StartWiseSignup() {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white p-6">
+      <h1 className="text-3xl font-bold mb-6">Create Your StartWise Account</h1>
+      <form className="w-full max-w-sm">
+        <input className="border p-3 w-full rounded mb-4" type="text" placeholder="Full Name" />
+        <input className="border p-3 w-full rounded mb-4" type="email" placeholder="Email Address" />
+        <input className="border p-3 w-full rounded mb-6" type="password" placeholder="Password" />
+        <Button className="w-full">Sign Up</Button>
+      </form>
+    </div>
+  );
+}
+
+// --- Thank You / Dashboard Page ---
+export function StartWiseThankYou() {
+  return (
+    <div className="min-h-screen flex flex-col justify-center items-center bg-slate-50 p-6">
+      <h1 className="text-4xl font-bold mb-4">Welcome to StartWise!</h1>
+      <p className="text-slate-600 mb-8 text-center max-w-md">
+        Your account is ready. Let's help you set up your business smarter, faster, and better. Start by completing your first checklist!
+      </p>
+      <Button className="text-lg px-6 py-3">Go to Dashboard</Button>
+    </div>
+  );
+}
